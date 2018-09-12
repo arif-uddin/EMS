@@ -12,9 +12,8 @@ namespace Models
     public class Organization
     {
         public int Id { get; set; }
-        public int Code { get; set; }
         [Required]
-        [Range(1,40)]
+        [Range(2,40)]
         public string Name { get; set; }
         public string  Address { get; set; }
         public long ContactNo { get; set; }
