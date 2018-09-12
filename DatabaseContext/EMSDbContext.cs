@@ -4,11 +4,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Models;
 
 namespace DatabaseContext
 {
-    class EMSDbContext:DbContext
+    public class EMSDbContext:DbContext
     {
+        public DbSet<Organization> Organizations { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
     }
 }
