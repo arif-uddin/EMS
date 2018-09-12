@@ -8,6 +8,10 @@ namespace Online_Exam_System.Controllers
 {
     public class CourseController : Controller
     {
-
+        // GET: Course
+        public ActionResult Index()
+        {
+            return View();
+        }
     }
 }

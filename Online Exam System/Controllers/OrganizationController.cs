@@ -8,6 +8,19 @@ namespace Online_Exam_System.Controllers
 {
     public class OrganizationController : Controller
     {
+        public ActionResult Add()
+        {
+            return View();
+        }
 
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }
