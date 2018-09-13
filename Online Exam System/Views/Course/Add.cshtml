@@ -12,10 +12,49 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
+<div class="container">
+    <h1>Course Add</h1>
     <div>
         <form>
-            
-        </form>
+        <div class="form-group row">
+            <label class="col-md-4">Select Organization</label>
+            <select class="form-control col-8">
+                <option>Default select</option>
+            </select>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-md-4">Course Name</label>
+            <input type="text" id="CourseName" class="form-control col-8" placeholder="Enter Course Name"/>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-md-4">Code</label>
+            <input type="text" id="CourseCode" class="form-control col-8"/>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-md-4">Course Duration</label>
+            <input type="text" id="CourseDuration" class="form-control col-8" placeholder="00 months"/>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-md-4">Credit</label>
+            <input type="text" id="CourseCredit" class="form-control col-8"/>
+        </div>
+
+            <div class="form-group row">
+                <label class="col-md-4">Tags</label>
+                <input type="text" id="tags" class="form-control col-8" placeholder="Enter Course Name"/>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success col-2">Submit</button>
+            </div>
+          
+      </form>
     </div>
+</div>
+
+
 </body>
 </html>
