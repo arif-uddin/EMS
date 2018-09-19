@@ -12,6 +12,13 @@ namespace DatabaseContext
     {
         public DbSet<Organization> Organizations { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Answer> Answers { get; set; }
+        public DbSet<Batch> Batches { get; set; }
+        public DbSet<Exam> Exams { get; set; }
+        public DbSet<Participant> Participants { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Trainer> Trainers { get; set; }
+
 
     }
 }

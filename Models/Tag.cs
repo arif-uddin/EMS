@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Question
+    class Tag
     {
         public int Id { get; set; }
-        public string Q { get; set; }
-        public string OptionType { get; set; }
-        public List<Answer> Answers { get; set; }
-
+        public string tag { get; set; }
+        public int  CourseId { get; set; }  
+        public Course Course { get; set; }  
 
     }
 }
