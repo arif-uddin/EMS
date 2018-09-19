@@ -24,6 +24,7 @@ namespace Models
         public string About { get; set; }
         public byte  Logo { get; set; }
         public ICollection<Course> Courses { get; set; }
+        public bool IsDeleted { get; set; }
         
     }
 }

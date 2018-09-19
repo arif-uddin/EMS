@@ -12,5 +12,10 @@ namespace Online_Exam_System.Controllers
         {
             return View();
         }
+
+        public PartialViewResult GetOrganizationCreatePartial()
+        {
+            return PartialView("~/Views/Shared/Organization/_OrganizationAdd.cshtml");
+        }
     }
 }

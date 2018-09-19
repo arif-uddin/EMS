@@ -22,5 +22,6 @@ namespace Models
         public string Tags { get; set; }
         public int OrganizationId { get; set; }
         public Organization Organization { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }
