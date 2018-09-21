@@ -19,9 +19,12 @@ namespace Models
         public int Credit { get; set; }
         [Required]
         public int Duration { get; set; }
-        public string Tags { get; set; }
+        public ICollection<Tag> Tags { get; set; }
+        public bool IsDeleted { get; set; }
+
         public int OrganizationId { get; set; }
         public Organization Organization { get; set; }
-        public bool IsDeleted { get; set; }
+        public ICollection<Batch> Batches { get; set; } 
+      
     }
 }

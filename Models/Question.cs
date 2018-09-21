@@ -12,7 +12,7 @@ namespace Models
         public string Q { get; set; }
         public string OptionType { get; set; }
         public List<Answer> Answers { get; set; }
-
+        public bool IsDeleted { get; set; } 
 
     }
 }

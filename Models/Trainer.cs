@@ -25,6 +25,7 @@ namespace Models
         public string Country { get; set; }
         public byte Image { get; set; }
         public bool IsDeleted { get; set; }
+
         public int OrganizationId { get; set; } 
         public Organization Organization { get; set; }
         public int CourseId { get; set; }

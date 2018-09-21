@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Tag
+   public class Tag
     {
         public int Id { get; set; }
         public string tag { get; set; }

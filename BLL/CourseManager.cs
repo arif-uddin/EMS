@@ -17,5 +17,10 @@ namespace BLL
             return _courseRepository.Add(course);
             
         }
+
+        public bool Update(Course course)
+        {
+            return _courseRepository.Update(course);
+        }
     }
 }

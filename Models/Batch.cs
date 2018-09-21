@@ -19,10 +19,12 @@ namespace Models
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public bool IsDeleted { get; set; } 
+
         public int OrganizationId { get; set; }
         public Organization Organization { get; set; }
         public int CourseId { get; set; }
         public Course Course { get; set; }
+        public ICollection<Participant> Participants { get; set; }  
 
     }
 }

@@ -17,5 +17,11 @@ namespace Online_Exam_System.Controllers
            // _courseManager.Add(course);
             return View();
         }
+
+        public ActionResult Update(Course course)
+        {
+            _courseManager.Update(course);
+            return View();
+    }
     }
 }

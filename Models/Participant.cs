@@ -10,7 +10,6 @@ namespace Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
         public string RegNo { get; set; }
         public string ContactNo { get; set; }
         public string Email { get; set; }
@@ -22,6 +21,13 @@ namespace Models
         public string Profession { get; set; }
         public string HighestAcademicQualification { get; set; }
         public byte Image { get; set; }
-        public bool IsDeleted { get; set; } 
+        public bool IsDeleted { get; set; }
+
+        public int OrganizationId { get; set; }
+        public Organization Organization { get; set; }
+        public int CourseId { get; set; }
+        public Course Course { get; set; }
+        public int BatchId { get; set; }   
+        public Batch Batch { get; set; }
     }   
 }

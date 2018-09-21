@@ -10,6 +10,10 @@ namespace DatabaseContext
 {
     public class EMSDbContext:DbContext
     {
+        public EMSDbContext()
+        {
+            Configuration.LazyLoadingEnabled = false;
+        }
         public DbSet<Organization> Organizations { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Answer> Answers { get; set; }
