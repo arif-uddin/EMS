@@ -8,7 +8,7 @@ $("#LoadOrganizationAddPage").click(function () {
 
     $.ajax({
         type: "POST",
-        url: "../../Dashboard/GetOrganizationCreatePartial",
+        url: "../../Organization/GetOrganizationCreatePartial",
         contentType: "application/JSON; charset=utf-8",
         data: JSON.stringify(),
         success: function (rData) {

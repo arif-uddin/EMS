@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BLL;
+using Models;
 
 namespace Online_Exam_System.Controllers
-{
+{ 
     public class OrganizationController : Controller
     {
-        public ActionResult Add()
+        OrganizationManager _organizationManager=new OrganizationManager();
+        public PartialViewResult GetOrganizationCreatePartial(Organization organization)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _organizationManager.Add(organization);               
+            }
+            return PartialView("~/Views/Shared/Organization/_OrganizationAdd.cshtml");
         }
 
-        public ActionResult Search()
-        {
-            return View();
-        }
-
-        public ActionResult Edit()
-        {
-            return View();
-        }
     }
 }
