@@ -23,10 +23,6 @@ namespace Models
         public byte Image { get; set; }
         public bool IsDeleted { get; set; }
 
-        public int OrganizationId { get; set; }
-        public Organization Organization { get; set; }
-        public int CourseId { get; set; }
-        public Course Course { get; set; }
         public int BatchId { get; set; }   
         public Batch Batch { get; set; }
     }   

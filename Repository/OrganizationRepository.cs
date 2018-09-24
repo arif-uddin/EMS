@@ -37,7 +37,7 @@ namespace Repository
 
         public Organization GetById(int id)
         {
-            return db.Organizations.Where(c => c.IsDeleted == true).FirstOrDefault(c => c.Id == id);
+            return db.Organizations.Where(c => c.IsDeleted == false).FirstOrDefault(c => c.Id == id);
         }
     }
 }

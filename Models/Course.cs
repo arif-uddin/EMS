@@ -22,9 +22,8 @@ namespace Models
         public ICollection<Tag> Tags { get; set; }
         public bool IsDeleted { get; set; }
 
-        public int OrganizationId { get; set; }
-        public Organization Organization { get; set; }
         public ICollection<Batch> Batches { get; set; } 
+        public ICollection<Organization> Organizations { get; set; }
       
     }
 }

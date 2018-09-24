@@ -1,0 +1,74 @@
+﻿@using Online_Exam_System.Controllers
+@model IEnumerable<Models.Organization>
+<h1 class="text-center">Organizations</h1>
+<div>
+    <table class="table table-striped table-bordered">
+        <thead class="bg-info ">
+        <tr class="text-white text-center">
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var organization in Model)
+        {
+            <tr class="text-center">
+                <td>
+                    @Html.DisplayFor(modelItem => organization.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => organization.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => organization.ContactNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => organization.Address)
+                </td>
+                <td class="text-primary">
+                    @Html.ActionLink("Details", "DetailsOrganization", new {id = organization}) |
+                    @Html.ActionLink("Edit", "EidtOrganization", new {id = organization.Id}) |
+                    @Html.ActionLink("Delete", "Delete", "Organization", new {id = organization.Id}, new { @class = "postLink" })
+                </td>
+            </tr>
+        }
+        </tbody>
+
+    </table>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $("a.postLink").click(function(e){
+            e.preventDefault();
+            $.post($(this).attr("href"), function (data) {
+
+                $.ajax({
+                    type: "GET",
+                    url: "../../Organization/GetOrganizationListPartial",
+                    contentType: "application/JSON; charset=utf-8",
+                    data: JSON.stringify(),
+                    success: function (rData) {
+
+                        $("#PartialDiv").html(rData);
+                    }
+
+                });
+
+            });
+
+        });    
+    });    
+</script>

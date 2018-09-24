@@ -12,13 +12,11 @@
 
     <!-- Bootstrap CSS -->
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    
+
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <!-- Our Custom CSS -->
     <link href="~/Content/dashboard.css" rel="stylesheet" />
-    
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+   
 
     <title>Online Exam System</title>
 </head>
@@ -29,7 +27,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Online Exam System</h3>
+                <a href="/"><h3>Online Exam System</h3></a>
                 <strong>OES</strong>
             </div>
 
@@ -41,7 +39,7 @@
                     </a>
                     <ul class="collapse list-unstyled" id="OrgSubMenu">
                         <li>
-                            <a href="#"> Organization List</a>
+                            <a href="#" id="LoadOrganizationListPage"> Organization List</a>
                         </li>
                         <li>
                             <a href="#" id="LoadOrganizationAddPage"> Organization Add</a>
@@ -167,7 +165,7 @@
                 </div>
             </nav>
 
-            <div id="OrganizationCreatePartialDiv" style="padding:0% 20% 0% 20% "></div>
+            <div id="PartialDiv" ></div>
 
         </div>
     </div>
@@ -176,11 +174,15 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="~/Scripts/jquery-3.0.0.js"></script>
-    <script src="~/Scripts/popper.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/Scripts/AppScripts/Dashboard/DashBoard.js"></script>
+    
+    <script src="~/Scripts/AppScripts/Organization/Organization.js"></script>
 
+<!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </body>
 </html>
