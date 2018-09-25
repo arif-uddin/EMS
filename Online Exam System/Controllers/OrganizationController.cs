@@ -18,12 +18,10 @@ namespace Online_Exam_System.Controllers
         }
 
         [HttpPost]
-        public PartialViewResult GetOrganizationCreatePartial(Organization organization,HttpPostedFileBase image)
+        public PartialViewResult GetOrganizationCreatePartial(Organization organization)
         {
             if (ModelState.IsValid)
             {
-                organization.Logo=new byte[image.ContentLength];
-                image.InputStream.Read(organization.Logo, 0, image.ContentLength);
                 _organizationManager.Add(organization);               
             }
             return PartialView("~/Views/Shared/Organization/_OrganizationAdd.cshtml");

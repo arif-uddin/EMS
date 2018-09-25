@@ -47,19 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EMSDbContext.cs" />
-    <Compile Include="Migrations\201809230516237_ModelCreated.cs" />
-    <Compile Include="Migrations\201809230516237_ModelCreated.Designer.cs">
-      <DependentUpon>201809230516237_ModelCreated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809250915557_OrganizationModelChange.cs" />
-    <Compile Include="Migrations\201809250915557_OrganizationModelChange.Designer.cs">
-      <DependentUpon>201809250915557_OrganizationModelChange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809250928530_OrganizationModelChangeAgain.cs" />
-    <Compile Include="Migrations\201809250928530_OrganizationModelChangeAgain.Designer.cs">
-      <DependentUpon>201809250928530_OrganizationModelChangeAgain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,17 +58,6 @@
       <Project>{1a578cd3-8e85-4208-a900-6566f098d2f2}</Project>
       <Name>Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809230516237_ModelCreated.resx">
-      <DependentUpon>201809230516237_ModelCreated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809250915557_OrganizationModelChange.resx">
-      <DependentUpon>201809250915557_OrganizationModelChange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809250928530_OrganizationModelChangeAgain.resx">
-      <DependentUpon>201809250928530_OrganizationModelChangeAgain.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
