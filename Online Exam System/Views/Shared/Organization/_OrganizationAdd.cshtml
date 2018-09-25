@@ -1,7 +1,8 @@
-﻿@model Models.Organization
+﻿@using Models
+@model Models.Organization
     <h1 class="text-center">Organization Add</h1>
     <div style="padding:0% 20% 0% 20% ">
-        <form method="post" id="OrganizationAddPage">
+        <form method="post" id="OrganizationAddPage" enctype = "multipart/form-data">
             <br />
             <div class="form-group row">
                 <label for="Name" class="col-md-2">Name</label>
@@ -38,16 +39,17 @@
             <div class="form-group row">
                 <label for="About" class="col-md-2">About</label>
                 <div class="col-md-10">
-                    @Html.TextAreaFor(c => c.About, new { @class = "form-control" })
+                    @Html.TextAreaFor(c => c.About, new { @class = "form-control"})
 
                 </div>
             </div>
 
             <div class="form-group row col-md-2">
-                    
-                    <label for="file">Upload Image:</label> 
-                    <input type="file" name="file" id="file" style="width: 100%;" /> 
-             </div>
+
+                <label for="file">Filename:</label>
+                <input type="file" name="image" id="image"/>
+
+            </div>
  
             <br/>
             <div class="form-group text-right ">
@@ -59,4 +61,3 @@
 <script type="text/javascript">
     $.validator.unobtrusive.parse(document);
 </script>
-@*<script src="~/Scripts/AppScripts/Organization/Organization.js"></script>*@

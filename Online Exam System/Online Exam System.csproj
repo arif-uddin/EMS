@@ -109,6 +109,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\AppScripts\Dashboard\DashBoard.js" />
     <Content Include="Scripts\AppScripts\Organization\Organization.js" />
+    <Content Include="Scripts\AppScripts\Organization\OrganizationAction.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -180,6 +181,8 @@
     <Content Include="Views\Dashboard\Dashboard.cshtml" />
     <Content Include="Views\Shared\Organization\_OrganizationAdd.cshtml" />
     <Content Include="Views\Shared\Organization\_OrganizationList.cshtml" />
+    <Content Include="Views\Shared\Organization\_OrganizationEdit.cshtml" />
+    <Content Include="Views\Shared\Organization\_OrganizationDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

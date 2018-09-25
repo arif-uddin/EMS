@@ -1,0 +1,18 @@
+﻿@model Models.Organization
+<h1 class="text-center">Organiztion Information</h1>
+<div class="card col-md-10" style="margin: 0 auto;width: auto">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">@Html.DisplayTextFor(c => c.Name)</h5>        
+        <p class="card-text">@Html.DisplayTextFor(c => c.About)</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Organization Code : @Html.DisplayTextFor(c => c.Code)</li>
+        <li class="list-group-item">Contact No : @Html.DisplayTextFor(c => c.ContactNo)</li>
+        <li class="list-group-item">Address : @Html.DisplayTextFor(c => c.Address)</li>
+    </ul>
+    <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+</div>

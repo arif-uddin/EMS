@@ -1,0 +1,64 @@
+﻿@model Models.Organization
+<h1 class="text-center">Organization Edit</h1>
+<div style="padding:0% 20% 0% 20% ">
+    <form method="post" id="OrganizationEditPage">
+        <br />
+        <div class="form-group row">
+            <label for="Name" class="col-md-2">Name</label>
+            <div class="col-md-10">
+                @Html.HiddenFor(c => c.Id, new { @class = "form-control", @Id = "Id" })
+                @Html.TextBoxFor(c => c.Name, new {@class = "form-control", @Id = "Name"})
+                @Html.ValidationMessageFor(c => c.Name, null, new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Code" class="col-md-2">Code</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(c => c.Code, new { @class = "form-control", @Id = "Code" })
+                @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Address" class="col-md-2">Address</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(c => c.Address, new { @class = "form-control", @Id = "Address" })
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="ContactNo" class="col-md-2">Contact No.</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(c => c.ContactNo, new { @class = "form-control", @Id = "ContactNo" })
+                @Html.ValidationMessageFor(c => c.ContactNo, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="About" class="col-md-2">About</label>
+            <div class="col-md-10">
+                @Html.TextAreaFor(c => c.About, new { @class = "form-control", @Id = "About" })
+
+            </div>
+        </div>
+
+        <div class="form-group row col-md-2">
+
+            <label for="file">Upload Image:</label>
+            <input type="file" name="file" id="file" style="width: 100%;" />
+        </div>
+
+        <br />
+        <div class="form-group text-right ">
+            <button type="submit" class="btn btn-success col-2" id="UpdateOrg">Update</button>
+        </div>
+
+    </form>
+</div>
+<script type="text/javascript">
+    $.validator.unobtrusive.parse(document);
+</script>
+
+<script src="~/Scripts/AppScripts/Organization/OrganizationAction.js"></script>

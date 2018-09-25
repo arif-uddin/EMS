@@ -12,15 +12,6 @@ namespace Models
 {
     public class Organization
     {
-        //public Organization()
-        //{
-
-        //}
-        //public Organization(int id)
-        //{
-        //    Id=id;
-        //}
-
         public int Id { get; set; }
 
         [Required]
@@ -33,11 +24,11 @@ namespace Models
         public string  Address { get; set; }
 
         [Required]
-        //[Range(11,11,ErrorMessage = "Your contact number is invalid!!")]
-        public long ContactNo { get; set; }
+       // [Range(11,11,ErrorMessage = "Your contact number is invalid!!")]
+        public string ContactNo { get; set; }
 
         public string About { get; set; }
-        public byte  Logo { get; set; }
+        public byte[]  Logo { get; set; }
         public bool IsDeleted { get; set; }
 
         public ICollection<Course> Courses { get; set; }

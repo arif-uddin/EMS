@@ -31,5 +31,10 @@ namespace BLL
         {
             return _organizationRepository.GetById(Id);
         }
+
+        public bool Update(Organization organization)
+        {
+            return _organizationRepository.Update(organization);
+        }
     }
 }
