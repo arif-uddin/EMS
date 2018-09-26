@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,13 +19,17 @@ namespace Online_Exam_System.Controllers
         }
 
         [HttpPost]
-        public PartialViewResult GetOrganizationCreatePartial(Organization organization)
+        public ActionResult GetOrganizationCreatePartial(Organization organization, HttpPostedFileBase file)
         {
+            
             if (ModelState.IsValid)
             {
+                organization.Logo = new byte[file.ContentLength];
+                file.InputStream.Read(organization.Logo, 0, file.ContentLength);
+
                 _organizationManager.Add(organization);               
             }
-            return PartialView("~/Views/Shared/Organization/_OrganizationAdd.cshtml");
+            return View("~/Views/Dashboard/Dashboard.cshtml");
         }
 
         public PartialViewResult GetOrganizationListPartial()
