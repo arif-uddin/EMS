@@ -55,11 +55,15 @@ namespace Online_Exam_System.Controllers
             return View("~/Views/Shared/Organization/_OrganizationEdit.cshtml", organization);
         }
 
-        public ActionResult Update(Organization organization)
+        [HttpPost]
+        public ActionResult Update(Organization organization, HttpPostedFileBase image)
         {
+            organization.Logo = new byte[image.ContentLength];
+            image.InputStream.Read(organization.Logo, 0, image.ContentLength);
             _organizationManager.Update(organization);
-             
-            return GetOrganizationListPartial();
+
+            //return GetOrganizationListPartial();
+            return View("~/Views/Dashboard/Dashboard.cshtml");
         }
 
         public PartialViewResult Details(int Id)
