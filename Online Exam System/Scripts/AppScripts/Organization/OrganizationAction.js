@@ -51,9 +51,10 @@
             data: $(this).serialize(),
             datatype: "html",
             success: function (data) {
-                //$(document).ajaxSuccess(function () {
-                //    alert("Organization Added Successfully");
-                //});
+//                $(document).ajaxSuccess(function() {
+//                    alert("Organization Added Successfully");
+                
+                
                 $.ajax({
                     type: "GET",
                     url: "../../Organization/GetOrganizationListPartial",

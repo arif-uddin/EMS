@@ -188,6 +188,9 @@
     <Content Include="Views\Shared\Course\_CourseList.cshtml" />
     <Content Include="Views\Shared\Batch\_BatchAdd.cshtml" />
     <Content Include="Views\Shared\Batch\_BatchList.cshtml" />
+    <Content Include="Views\Shared\Course\_CourseDetails.cshtml" />
+    <Content Include="Views\Shared\Batch\_BatchDetails.cshtml" />
+    <Content Include="Views\Shared\Batch\_BatchEdit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

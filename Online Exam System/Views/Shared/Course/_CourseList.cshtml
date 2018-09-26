@@ -1,1 +1,53 @@
-﻿
+﻿@using Online_Exam_System.Controllers
+@model IEnumerable<Models.Course>
+<h1 class="text-center">Courses</h1>
+<div>
+    <table class="table table-striped table-bordered">
+        <thead class="bg-info ">
+            <tr class="text-white text-center">
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Code)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Duration)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Credit)
+                </th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var course in Model)
+            {
+                <tr class="text-center">
+                    <td>
+                        @Html.DisplayFor(modelItem => course.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => course.Code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => course.Duration)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => course.Credit)
+                    </td>
+                    <td class="text-primary">
+                        <a class="btn detailsLink" data-url="@Url.Action("Details", "Course", new { id = course.Id })">Details</a>|
+                        <a class="btn updateLink" data-url="@Url.Action("Edit", "Course", new { id = course.Id })">Edit</a>|
+                        @Html.ActionLink("Delete", "Delete", "Course", new { id = course.Id }, new { @class = "deleteLink" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+<script src="~/Scripts/AppScripts/Organization/OrganizationAction.js"></script>
+

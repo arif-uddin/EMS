@@ -45,7 +45,6 @@ namespace Online_Exam_System.Controllers
             organization=_organizationManager.GetById(Id);
             _organizationManager.Delete(organization);
             return View("~/Views/Dashboard/Dashboard.cshtml");
-
         }
 
         public ActionResult Edit(int Id)    

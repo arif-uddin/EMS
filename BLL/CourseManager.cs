@@ -22,5 +22,20 @@ namespace BLL
         {
             return _courseRepository.Update(course);
         }
+
+        public Course GetById(int Id)
+        {
+            return _courseRepository.GetById(Id);
+        }
+
+        public bool Delete(Course course)
+        {
+            return _courseRepository.Delete(course);
+        }
+
+        public List<Course> GetAll()
+        {
+            return _courseRepository.GetAll();
+        }
     }
 }
