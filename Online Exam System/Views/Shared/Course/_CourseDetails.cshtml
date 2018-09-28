@@ -1,1 +1,22 @@
-﻿
+﻿@model Models.Course
+<h1 class="text-center">Course Information</h1>
+<div class="card col-md-10" style="margin: 0 auto; width: auto">
+    <div >
+                <div class="card-body">
+                <h5 class="card-title">@Html.DisplayTextFor(c => c.Name)</h5>
+                <p class="card-text">@Html.DisplayTextFor(c => c.Outline)</p>
+
+        </div>
+
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Organization Code : @Html.DisplayTextFor(c => c.Code)</li>
+        <li class="list-group-item">Contact No : @Html.DisplayTextFor(c => c.Duration)</li>
+        <li class="list-group-item">Address : @Html.DisplayTextFor(c => c.Credit)</li>
+    </ul>
+    <div class="card-body text-right">
+        <a href="#" class="card-link text-primary">Courses</a>
+        <a href="#" class="card-link text-primary">Add Course</a>
+    </div>
+</div>
+

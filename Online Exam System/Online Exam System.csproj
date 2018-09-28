@@ -107,6 +107,8 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\AppScripts\Course\Course.js" />
+    <Content Include="Scripts\AppScripts\Course\CourseAction.js" />
     <Content Include="Scripts\AppScripts\Dashboard\DashBoard.js" />
     <Content Include="Scripts\AppScripts\Organization\Organization.js" />
     <Content Include="Scripts\AppScripts\Organization\OrganizationAction.js" />

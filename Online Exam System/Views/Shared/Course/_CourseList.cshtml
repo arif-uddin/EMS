@@ -39,9 +39,9 @@
                         @Html.DisplayFor(modelItem => course.Credit)
                     </td>
                     <td class="text-primary">
-                        <a class="btn detailsLink" data-url="@Url.Action("Details", "Course", new { id = course.Id })">Details</a>|
-                        <a class="btn updateLink" data-url="@Url.Action("Edit", "Course", new { id = course.Id })">Edit</a>|
-                        @Html.ActionLink("Delete", "Delete", "Course", new { id = course.Id }, new { @class = "deleteLink" })
+                        <a class="btn coursedetailsLink" data-url="@Url.Action("Details", "Course", new { id = course.Id })">Details</a>|
+                        <a class="btn courseupdateLink" data-url="@Url.Action("Edit", "Course", new { id = course.Id })">Edit</a>|
+                        @Html.ActionLink("Delete", "Delete", "Course", new { id = course.Id }, new { @class = "coursedeleteLink" })
                     </td>
                 </tr>
             }
@@ -49,5 +49,7 @@
 
     </table>
 </div>
-<script src="~/Scripts/AppScripts/Organization/OrganizationAction.js"></script>
-
+<script type="text/javascript">
+    $.validator.unobtrusive.parse(document);
+</script>
+<script src="~/Scripts/AppScripts/Course/CourseAction.js"></script>

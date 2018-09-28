@@ -66,20 +66,4 @@
         });
     });
 
-    $("#LoadCourseListPage").click(function () {
-
-        $.ajax({
-            type: "GET",
-            url: "../../Course/GetCourseListPartial",
-            contentType: "application/JSON; charset=utf-8",
-            data: JSON.stringify(),
-            success: function (rData) {
-
-                $("#PartialDiv").html(rData);
-            }
-
-        });
-    });
-
-
     });
