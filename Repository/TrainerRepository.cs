@@ -37,7 +37,7 @@ namespace Repository
 
         public Trainer GetById(int id)
         {
-            return db.Trainers.Where(c => c.IsDeleted == true).FirstOrDefault(c => c.Id == id);
+            return db.Trainers.Where(c => c.IsDeleted == false).FirstOrDefault(c => c.Id == id);
         }
     }
 }

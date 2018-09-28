@@ -5,7 +5,7 @@
             $('#sidebar').toggleClass('active');
         });
 
-
+//    Organization Loading Section 
     $("#LoadOrganizationAddPage").click(function () {
 
         $.ajax({
@@ -37,6 +37,8 @@
         });
     });
 
+
+
     $("#LoadCourseAddPage").click(function () {
 
         $.ajax({
@@ -66,11 +68,11 @@
         });
     });
 
-    $("#LoadCourseListPage").click(function () {
+    $("#LoadTrainerAddPage").click(function () {
 
         $.ajax({
             type: "GET",
-            url: "../../Course/GetCourseListPartial",
+            url: "../../Trainer/GetTrainerCreatePartial",
             contentType: "application/JSON; charset=utf-8",
             data: JSON.stringify(),
             success: function (rData) {

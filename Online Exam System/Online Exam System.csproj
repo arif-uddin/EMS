@@ -191,6 +191,10 @@
     <Content Include="Views\Shared\Course\_CourseDetails.cshtml" />
     <Content Include="Views\Shared\Batch\_BatchDetails.cshtml" />
     <Content Include="Views\Shared\Batch\_BatchEdit.cshtml" />
+    <Content Include="Views\Shared\Participant\_ParticipantAdd.cshtml" />
+    <Content Include="Views\Shared\Participant\_ParticipantEdit.cshtml" />
+    <Content Include="Views\Shared\Participant\_ParticipantList.cshtml" />
+    <Content Include="Views\Shared\Trainer\_TrainerAdd.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -207,8 +211,6 @@
     <Folder Include="Views\Participant\" />
     <Folder Include="Views\Question\" />
     <Folder Include="Views\Shared\Exam\" />
-    <Folder Include="Views\Shared\Participant\" />
-    <Folder Include="Views\Shared\Trainer\" />
     <Folder Include="Views\Trainer\" />
   </ItemGroup>
   <ItemGroup>
