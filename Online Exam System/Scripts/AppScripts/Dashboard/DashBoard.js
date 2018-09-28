@@ -68,6 +68,7 @@
         });
     });
 
+
     $("#LoadTrainerAddPage").click(function () {
 
         $.ajax({
@@ -81,7 +82,4 @@
             }
 
         });
-    });
-
-
     });

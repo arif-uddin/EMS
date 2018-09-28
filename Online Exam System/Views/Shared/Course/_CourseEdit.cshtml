@@ -16,23 +16,45 @@
             </div>
         </div>
 
-            <div class="form-group row">
-                <label for="Code" class="col-md-2">Code</label>
-                <div class="col-md-10">
-                    @Html.TextBoxFor(c => c.Code, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
-                </div>
+        <div class="form-group row">
+            <label for="Code" class="col-md-2">Code</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(c => c.Code, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
             </div>
-
-           
-
-            <br />
-            <div class="form-group text-right ">
-                <button type="submit" class="btn btn-success col-2">Submit</button>
+        </div>
+        <div class="form-group row">
+            <label for="Duration" class="col-md-2">Course Duration(hrs)</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(c => c.Duration, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.Duration, null, new { @class = "text-danger" })
             </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Credit" class="col-md-2">Credit</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(c => c.Credit, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.Credit, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Outline" class="col-md-2">Outline</label>
+            <div class="col-md-10">
+                @Html.TextAreaFor(c => c.Outline, new { @class = "form-control" })
+
+            </div>
+        </div>
+
+
+        <br />
+        <div class="form-group text-right ">
+            <button type="submit" class="btn btn-success col-2">Update</button>
+        </div>
 
     </form>
 </div>
 <script type="text/javascript">
     $.validator.unobtrusive.parse(document);
 </script>
+<script src="~/Scripts/AppScripts/Course/CourseAction.js"></script>

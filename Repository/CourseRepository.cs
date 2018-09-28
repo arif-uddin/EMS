@@ -38,7 +38,7 @@ namespace Repository
 
         public Course GetById(int id)
         {
-            return db.Courses.Where(c=>c.IsDeleted==true).FirstOrDefault(c => c.Id == id);
+            return db.Courses.Where(c=>c.IsDeleted==false).FirstOrDefault(c => c.Id == id);
         }
     }
 }
