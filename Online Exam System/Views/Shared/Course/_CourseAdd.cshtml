@@ -5,13 +5,6 @@
         <br />
 
         <div class="form-group row">
-            <label for="Code" class="col-md-2">Oraganization</label>
-            <div class="col-md-10">
-                @* @Html.DropDownListFor(c => c.Organizations, new { @class = "form-control" }) *@
-               </div>
-        </div>
-
-        <div class="form-group row">
             <label for="Name" class="col-md-2">Name</label>
             <div class="col-md-10">
                 @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
@@ -59,5 +52,33 @@
 </div>
 <script type="text/javascript">
     $.validator.unobtrusive.parse(document);
+    
+    $(document).ready(function () {
+
+
+
+        $(document).on("submit", "#CourseAddPage", function (e) {
+
+            e.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "../../Course/GetCourseCreatePartial",
+                data: $(this).serialize(),
+                datatype: "html",
+                success: function (data) {
+                    $(document).ajaxSuccess(function () {
+//                        alert("Course Added Successfully");
+                        $('#CourseAddPage')[0].reset();
+                    });
+                }
+            });
+
+
+        });
+    
+
+    });
+
 </script>
 

@@ -53,10 +53,10 @@ namespace Online_Exam_System.Controllers
 
         }
 
-        public ActionResult Edit(int Id)
+        public ActionResult Edit(int id)    
         {
             Course course = new Course();
-            course = _courseManager.GetById(Id);
+            course = _courseManager.GetById(id);
 
             return View("~/Views/Shared/Course/_courseEdit.cshtml", course);
         }

@@ -26,8 +26,7 @@ namespace Models
         public byte Image { get; set; }
         public bool IsDeleted { get; set; }
 
-        public int CourseId { get; set; }
-        public Course Course { get; set; }
         public ICollection<Batch> Batches { get; set; }
+        public ICollection<Course> CoursesType { get; set; }
     }
 }

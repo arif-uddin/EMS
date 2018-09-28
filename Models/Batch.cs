@@ -22,6 +22,9 @@ namespace Models
 
         public int CourseId { get; set; }
         public Course Course { get; set; }
+
+        public int TrainerId { get; set; }
+        public Trainer Trainer { get; set; }
         public ICollection<Participant> Participants { get; set; }  
 
     }

@@ -1,1 +1,38 @@
 ﻿
+@model Models.Course
+
+
+<h1 class="text-center">Organization Edit</h1>
+<div style="padding:0% 20% 0% 20% ">
+    <form method="post" id="CourseEditPage" enctype="multipart/form-data">
+    <br />
+        <br />
+        <div class="form-group row">
+            <label for="Name" class="col-md-2">Name</label>
+            <div class="col-md-10">
+                @Html.HiddenFor(c => c.Id, new { @class = "form-control" })
+                @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+            <div class="form-group row">
+                <label for="Code" class="col-md-2">Code</label>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(c => c.Code, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
+                </div>
+            </div>
+
+           
+
+            <br />
+            <div class="form-group text-right ">
+                <button type="submit" class="btn btn-success col-2">Submit</button>
+            </div>
+
+    </form>
+</div>
+<script type="text/javascript">
+    $.validator.unobtrusive.parse(document);
+</script>
