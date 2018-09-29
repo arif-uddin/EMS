@@ -1,7 +1,12 @@
 ﻿@model Models.ViewModels.TrainerVM.TrainerAddVm
 
-<h1> Add New Trainer</h1>
-@Html.DropDownListFor(c=>c.Id, Model.OrganizationsLookup)
+<h1 class="text-center">Organization Add</h1>
+<div style="padding:0% 20% 0% 20% ">
+    @using (Html.BeginForm("GetTrainerCreatePartial", "Trainer", FormMethod.Post, new {enctype = "multipart/form-data", id = "LoadOrganizationAddPage"}))
+    {
+        @Html.DropDownListFor(c => c.Id, Model.OrganizationsLookup)
+    }
+</div>
 
 <script type="text/javascript">
  Document.ready(function() {
