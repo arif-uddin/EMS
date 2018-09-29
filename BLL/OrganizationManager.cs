@@ -17,6 +17,11 @@ namespace BLL
             return _organizationRepository.Add(organization);
         }
 
+        public bool Attach(int organizationId, int courseId)
+        {
+            return _organizationRepository.Attach(organizationId,courseId);
+        }
+
         public List<Organization> GetAll()
         {
             return _organizationRepository.GetAll();

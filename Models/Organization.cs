@@ -12,6 +12,11 @@ namespace Models
 {
     public class Organization
     {
+        public Organization()
+        {
+            this.Courses=new HashSet<Course>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -31,7 +36,7 @@ namespace Models
         public byte[]  Logo { get; set; }
         public bool IsDeleted { get; set; }
 
-        public ICollection<Course> Courses { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
  
     }
 }

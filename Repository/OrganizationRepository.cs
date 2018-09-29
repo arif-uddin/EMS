@@ -18,6 +18,22 @@ namespace Repository
              db.Organizations.Add(organization);
             return db.SaveChanges() > 0;
         }
+
+        public bool Attach(int organizationId,int courseId)
+        {
+            Organization organization=new Organization{Id= organizationId };
+            db.Organizations.Add(organization);
+            db.Organizations.Attach(organization);
+            Course course=new Course{Id = courseId};
+            db.Courses.Add(course);
+            db.Courses.Attach(course);
+
+            organization.Courses.Add(course);
+
+            return db.SaveChanges()>0;
+        }
+
+
         public bool Update(Organization organization)
         {
             db.Organizations.Attach(organization);

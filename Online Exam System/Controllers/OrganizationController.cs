@@ -89,16 +89,15 @@ namespace Online_Exam_System.Controllers
 
         public PartialViewResult OrganizationCourseAdd(OrganizationCourseAddVM obj)
         {
-            //Organization org= new Organization();
-            //List<Course> courseList = new List<Course>();
-            //Course course = new Course();
-            //org.Id = obj.Id;
-            //course.Id = obj.CourseId;
-            //courseList.Add(course);
-            //org.Courses = courseList;
-            //_organizationManager.Add(org);
+            Organization org = new Organization();
+            Course course = new Course();
+            org.Id = obj.Id;
+            course.Id = obj.CourseId;
+            _organizationManager.Attach(org.Id, course.Id);
+            int orgId = org.Id;
+            org = _organizationManager.GetById(orgId);
+            return PartialView("~/Views/Shared/Organization/_OrganizationDetails.cshtml", org);
 
-            return PartialView("~/Views/Shared/Organization/_OrganizationCourseAdd.cshtml");
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Models
 
         public ICollection<Trainer> Trainers { get; set; }
         public ICollection<Batch> Batches { get; set; } 
-        public ICollection<Organization> Organizations { get; set; }
+        public virtual ICollection<Organization> Organizations { get; set; }
       
     }
 }
