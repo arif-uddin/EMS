@@ -11,6 +11,7 @@ namespace Models.ViewModels.TrainerVM
 {
    public class TrainerAddVm 
     {
+        
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
@@ -19,6 +20,9 @@ namespace Models.ViewModels.TrainerVM
         public string RegNo { get; set; }
         [Required]
         public string ContactNo { get; set; }
+
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Email { get; set; }
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
@@ -28,6 +32,8 @@ namespace Models.ViewModels.TrainerVM
         public byte Image { get; set; }
         public bool IsDeleted { get; set; }
         public List<SelectListItem> OrganizationsLookup { get; set; }
+        public List<SelectListItem> CoursesLookup { get; set; }
+        public List<SelectListItem> BatchLookup { get; set; }
 
     }
 }

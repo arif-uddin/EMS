@@ -113,6 +113,7 @@
     <Content Include="Scripts\AppScripts\Dashboard\DashBoard.js" />
     <Content Include="Scripts\AppScripts\Organization\Organization.js" />
     <Content Include="Scripts\AppScripts\Organization\OrganizationAction.js" />
+    <Content Include="Scripts\AppScripts\Trainer\TrainerAction.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -201,6 +202,8 @@
     <Content Include="Views\Shared\Participant\_ParticipantList.cshtml" />
     <Content Include="Views\Shared\Trainer\_TrainerAdd.cshtml" />
     <Content Include="Views\Shared\Organization\_OrganizationCourseAdd.cshtml" />
+    <Content Include="Views\Shared\Trainer\_TrainerList.cshtml" />
+    <Content Include="Views\Shared\Trainer\_TrainerDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

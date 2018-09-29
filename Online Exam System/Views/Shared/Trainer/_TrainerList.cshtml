@@ -1,0 +1,47 @@
+﻿@using Online_Exam_System.Controllers
+@model IEnumerable<Models.Trainer>
+<h1 class="text-center">Organizations</h1>
+<div>
+    <table class="table table-striped table-bordered">
+        <thead class="bg-info ">
+        <tr class="text-white text-center">
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var trainer in Model)
+        {
+            <tr class="text-center">
+                <td>
+                    @Html.DisplayFor(modelItem => trainer.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => trainer.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => trainer.ContactNo)
+                </td>
+                <td class="text-primary">
+                    <a class="btn detailsLink" data-url="@Url.Action("Details", "Trainer", new { id = trainer.Id })">Details</a>|
+                    <a class="btn updateLink" data-url="@Url.Action("Edit", "Trainer", new { id = trainer.Id })">Edit</a>|
+                    @Html.ActionLink("Delete", "Delete", "Trainer", new { id = trainer.Id }, new { @class = "deleteLink" })
+                </td>
+            </tr>
+        }
+        </tbody>
+
+    </table>
+</div>
+<script src="~/Scripts/AppScripts/Trainer/TrainerAction.js"></script>
+

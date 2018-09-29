@@ -18,13 +18,23 @@ namespace Online_Exam_System.Controllers
         {
             var model = new TrainerAddVm();
             model.OrganizationsLookup = _lookUp.GetOrganizations();
+            model.CoursesLookup = _lookUp.GetCourses();
+            model.BatchLookup = _lookUp.GetBatches();
+
             return View("~/Views/Shared/Trainer/_TrainerAdd.cshtml",model);
         }
 
-        public JsonResult GetAllOrganization()
+
+        public PartialViewResult GetTrainerListPartial()
         {
-            List<Trainer> trainers = _trainerManager.GetAll();
-            return Json(trainers, JsonRequestBehavior.AllowGet);
+            List<Trainer> TrainerList = _trainerManager.GetAll();
+            return PartialView("~/Views/Shared/Trainer/_TrainerList.cshtml", TrainerList);
+        }
+        public PartialViewResult Details(int Id)
+        {
+            Trainer trainer = new Trainer();
+            trainer = _trainerManager.GetById(Id);
+            return PartialView("~/Views/Shared/Trainer/_TrainerDetails.cshtml", trainer);
         }
     }
 }
