@@ -26,7 +26,37 @@
         <li class="list-group-item">Address : @Html.DisplayTextFor(c => c.Address)</li>
     </ul>
     <div class="card-body text-right"> 
-        <a href="#" class="card-link text-primary">Courses</a>
-        <a href="#" class="card-link text-primary">Add Course</a>
+        @*<a href="#" id="LoadOrganizationCoursePage" class="card-link text-primary">Add Course</a>*@
+        <a class="btn OrganizationCourseAddLink text-primary" data-url="@Url.Action("LoadOrganizationCourseAddPage", "Organization", new { id = Model.Id})">Add Course</a>
     </div>
 </div>
+
+@*<script type="text/javascript">
+    //Organization and Course Add 
+    $("#LoadOrganizationCoursePage").click(function () {
+
+        $.ajax({
+            type: "GET",
+            url: "../../Organization/OrganizationCourseAdd",
+            contentType: "application/JSON; charset=utf-8",
+            data: JSON.stringify(),
+            success: function (rData) {
+
+                $("#PartialDiv").html(rData);
+            }
+
+        });
+    });
+</script>*@
+
+<script type="text/javascript">
+    //Organization Details 
+    $(".OrganizationCourseAddLink").click(function() {
+        var url = $(this).attr("data-url");
+        $.post(url,
+            function(rData) {
+                $("#PartialDiv").html(rData);
+            });
+
+    });
+</script>

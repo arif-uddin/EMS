@@ -1,0 +1,59 @@
+﻿@model Models.ViewModels.OrganizationVM.OrganizationCourseAddVM
+<h1 class="text-center">Organization: Course Add</h1>
+<div style="padding: 0% 20% 0% 20%">
+    <form method="post" id="OrganizationCourseAddPage" enctype="multipart/form-data">
+        
+        <br />
+        <div class="form-group row">
+            <div class="col-md-10">
+                @Html.HiddenFor(c => c.Id, new { @class = "form-control" })
+                <h5 class="card-title">@Html.DisplayTextFor(c => c.Name)</h5>
+                <p class="card-text">@Html.DisplayTextFor(c => c.Id)</p>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <div class="col-md-10">
+                @Html.DropDownListFor(c=>c.CourseId ,Model.CoursesLookUp, new { @class = "form-control" })
+            </div>
+        </div>
+
+       
+
+        <br />
+        <div class="form-group text-right ">
+            <button type="submit" class="btn btn-success col-2">Submit</button>
+        </div>
+
+    </form>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $(document).on("submit", "#OrganizationCourseAddPage", function (e) {
+
+            e.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "../../Organization/OrganizationCourseAdd",
+                data: $(this).serialize(),
+                datatype: "html",
+                success: function (data) {
+                    $(document).ajaxSuccess(function () {
+                    
+                        // alert("Course Added Successfully");
+                        $('#CourseAddPage')[0].reset();
+                    });
+                }
+            });
+
+
+        });
+
+    });
+
+
+</script>

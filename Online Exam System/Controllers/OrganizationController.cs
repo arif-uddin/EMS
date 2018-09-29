@@ -6,12 +6,15 @@ using System.Web;
 using System.Web.Mvc;
 using BLL;
 using Models;
+using Models.ViewModels.OrganizationVM;
+using Online_Exam_System.Models;
 
 namespace Online_Exam_System.Controllers
 { 
     public class OrganizationController : Controller
     {
         OrganizationManager _organizationManager=new OrganizationManager();
+        LookUp _lookUp=new LookUp();
 
         public PartialViewResult GetOrganizationCreatePartial()
         {
@@ -73,5 +76,29 @@ namespace Online_Exam_System.Controllers
             return PartialView("~/Views/Shared/Organization/_OrganizationDetails.cshtml", organization);
         }
 
+        public PartialViewResult LoadOrganizationCourseAddPage(int id)
+        {
+
+            OrganizationCourseAddVM model=new OrganizationCourseAddVM();
+            model.Id = id;
+            var org= _organizationManager.GetById(id);
+            model.Name = org.Name;
+            model.CoursesLookUp = _lookUp.GetCourses();
+            return PartialView("~/Views/Shared/Organization/_OrganizationCourseAdd.cshtml",model);
+        }
+
+        public PartialViewResult OrganizationCourseAdd(OrganizationCourseAddVM obj)
+        {
+            //Organization org= new Organization();
+            //List<Course> courseList = new List<Course>();
+            //Course course = new Course();
+            //org.Id = obj.Id;
+            //course.Id = obj.CourseId;
+            //courseList.Add(course);
+            //org.Courses = courseList;
+            //_organizationManager.Add(org);
+
+            return PartialView("~/Views/Shared/Organization/_OrganizationCourseAdd.cshtml");
+        }
     }
 }

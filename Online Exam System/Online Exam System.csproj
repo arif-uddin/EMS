@@ -200,6 +200,7 @@
     <Content Include="Views\Shared\Participant\_ParticipantEdit.cshtml" />
     <Content Include="Views\Shared\Participant\_ParticipantList.cshtml" />
     <Content Include="Views\Shared\Trainer\_TrainerAdd.cshtml" />
+    <Content Include="Views\Shared\Organization\_OrganizationCourseAdd.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
