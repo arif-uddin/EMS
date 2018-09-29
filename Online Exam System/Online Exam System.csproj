@@ -105,6 +105,7 @@
     <Content Include="Content\dashboard.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\login.css" />
     <Content Include="Content\tagsinput.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
@@ -168,6 +169,7 @@
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ExamController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrganizationController.cs" />
     <Compile Include="Controllers\ParticipantController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
@@ -204,6 +206,7 @@
     <Content Include="Views\Shared\Organization\_OrganizationCourseAdd.cshtml" />
     <Content Include="Views\Shared\Trainer\_TrainerList.cshtml" />
     <Content Include="Views\Shared\Trainer\_TrainerDetails.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
