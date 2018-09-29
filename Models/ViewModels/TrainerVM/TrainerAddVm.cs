@@ -5,17 +5,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 
-namespace Models
+namespace Models.ViewModels.TrainerVM
 {
-    public class Trainer
+   public class TrainerAddVm 
     {
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public bool IsLead { get; set; }  
+        public bool IsLead { get; set; }
         [Required]
         public string RegNo { get; set; }
         [Required]
@@ -28,9 +27,7 @@ namespace Models
         public string Country { get; set; }
         public byte Image { get; set; }
         public bool IsDeleted { get; set; }
-
-        public ICollection<Batch> Batches { get; set; }
-        public ICollection<Course> CoursesType { get; set; }
+        public List<SelectListItem> OrganizationsLookup { get; set; }
 
     }
 }

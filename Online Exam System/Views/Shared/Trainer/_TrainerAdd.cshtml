@@ -1,6 +1,7 @@
-﻿@model Models.Trainer
+﻿@model Models.ViewModels.TrainerVM.TrainerAddVm
 
 <h1> Add New Trainer</h1>
+@Html.DropDownListFor(c=>c.Id, Model.OrganizationsLookup)
 
 <script type="text/javascript">
  Document.ready(function() {
