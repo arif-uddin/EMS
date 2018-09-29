@@ -1,4 +1,5 @@
 ﻿@model Models.Course
+<link href="~/Content/tagsinput.css" rel="stylesheet" />
 <h1 class="text-center">Course Add</h1>
 <div style="padding:0% 20% 0% 20% ">
     <form method="post" id="CourseAddPage" enctype="multipart/form-data">
@@ -37,7 +38,17 @@
         <div class="form-group row">
             <label for="Outline" class="col-md-2">Outline</label>
             <div class="col-md-10">
-                @Html.TextAreaFor(c => c.Outline, new { @class = "form-control" })
+                @Html.TextAreaFor(c => c.Outline, new { @class = "form-control"})
+                
+
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="Tags" class="col-md-2">Tags</label>
+            <div class="col-md-10">
+                <input type="text" data-role="tagsinput" class="form-control bootstrap-tagsinput" id="usr">
+                @*@Html.TextBoxFor(c=>c.Tags, new {@data_role = "tagsinput",@class = " bootstrap-tagsinput",id="inputtags" })*@
 
             </div>
         </div>
@@ -54,3 +65,4 @@
 <script type="text/javascript">
     $.validator.unobtrusive.parse(document);
 </script>
+<script src="~/Scripts/tagsinput.js"></script>
